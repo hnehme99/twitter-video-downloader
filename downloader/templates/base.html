@@ -1,0 +1,64 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Twitter Video Download</title>
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Montserrat:400,400i,700">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@500&display=swap" rel="stylesheet">
+    <link rel="stylesheet" type="text/css" href="{% static 'style.css' %}">
+    <link rel="stylesheet" type="" href="{% static 'style.css' %}">
+</head>
+
+<body>
+
+<div class="page-container">
+    <div class="header">
+        <header>
+            <div id="navbar" class="navbar-collapse">
+                <div class="img">
+                    <a class="logo" href="../"> <img src="{% static '/images/logo.png' %}"
+                            alt="tweet-logo" border="0" width=40 height=40> <span>TwitDown</span></a>
+                </div>
+                <ul class="nav">
+                    <li>
+                        <a href="../" class="active">Home </a>
+                    </li>
+
+                    <li>
+                        <a href="{% url 'How-to' %}"> Instructions </a>
+                    </li>
+
+                    <li>
+                        <a class="telegram-link" href="https://t.me/Tweetdlbot" target="_blank"> Telegram</a>
+                        <div class="telegram-logo">
+                        <img  src="{% static '/images/telegram-logo-944.png' %}" width="30" height="30">
+                        </div>
+                    </li>
+                </ul>
+            </div>
+        </header>
+    </div>
+
+    <div class="body">
+    {% block content %}{% endblock %}
+    </div>
+
+    <div class="footer">
+         <footer>
+                <div class="copyright">
+                    <ul class="flex flex-a-i-center">
+                        <li><a href="{% url 'contact' %}">Contact us</a></li>
+                        <li><a href="{% url 'privacy' %}">Privacy Policy</a></li>
+                        <li><a href="{% url 'terms' %}">Terms of service</a></li>
+                    </ul>
+                    <p class="mag0"> © 2022 TwitDown </p>
+                </div>
+         </footer>
+    </div>
+</div>
+</body>
+</html>

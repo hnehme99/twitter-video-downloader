@@ -1,0 +1,4 @@
+Django==4.0.5
+numpy==1.21.2
+python-dotenv==0.20.0
+tweepy==4.6.0

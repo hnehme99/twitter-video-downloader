@@ -1,0 +1,23 @@
+{% extends 'base.html' %}
+<!DOCTYPE html>
+<html lang="en">
+<body>
+{% block content %}
+    <div class="contact-container">
+		<h1>Contact</h1>
+		<div class="contact-p">
+			<p>
+				Please write your name, email address and a message below if you have any questions.
+			</p>
+		</div>
+		<div class="contact-form">
+			<form method="post">
+				{% csrf_token %}
+				{{form.as_p}}
+				<button class="contact-btn" id="contact-btn" type="submit">Submit</button>
+			</form>
+		</div>
+    </div>
+{% endblock%}
+</body>
+</html>

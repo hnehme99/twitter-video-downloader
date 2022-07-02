@@ -1,0 +1,43 @@
+{% extends 'base.html' %}
+
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+
+<body>
+{%block content%}
+    <div> <h1></h1></div>
+    <div class="how-to-container">
+        <div class="step">
+            <h3 class="num1">1</h3>
+            <p> The first step is to copy a valid Twitter link that contains a video.<br>
+                A valid Twitter link is shown below:</p>
+            <img class="link-img" src=" {% static '/images/link.PNG' %}">
+        </div>
+        <hr>
+        <div class="step">
+            <h3 class="num2">2</h3>
+            <p> The second step is to paste the link then press "Download":</p>
+            <img src=" {% static '/images/url-input.PNG' %}">
+        </div>
+        <hr>
+        <div class="step">
+            <h3 class="num3">3</h3>
+            <p> After pressing "Download", resolutions will be shown.<br> Choose the desired resolution by pressing "Download" again:</p>
+            <img src=" {% static '/images/res.PNG' %}">
+        </div>
+        <hr>
+        <div class="step">
+            <h3 class="num4">4</h3>
+            <p> A video player will open in a new tab. <br> <b>On PC</b>: Press Ctrl+S to save the video
+                <br><b>On mac</b>: Press Command+S to save the video <br>
+                <b>On Android & Ios</b>: Long press on the screen to save the video
+            </p>
+            <img src=" {% static '/images/dwonload.PNG' %}">
+        </div>
+    </div>
+
+{%endblock%}
+</body>
+
+</html>

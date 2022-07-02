@@ -1,0 +1,63 @@
+{% extends 'base.html' %}
+<!DOCTYPE html>
+<html lang="en">
+
+<body>
+{% block content %}
+    <div> <h1></h1></div>
+
+    <div class=" vid-info-container">
+        <p class="par"> Here's Your Video!</p>
+        <hr width=70% style="height:2px;border-width:0;color:gray;background-color:DodgerBlue" >
+        <div class="info-row">
+
+            <div class="thumbnail">
+                <img src={{thumb}}
+                     class="tweet-thumbnail" width="180" height="180">
+            </div>
+
+            <div class="tweet-content">
+                <p> <b>Tweeted by </b>: {{user}}</p>
+                <p> <b>Tweeted on</b>: {{ created_at}}</p>
+                <p> <b>Tweet Duration</b>: {{ duration }}</p>
+            </div>
+
+        </div>
+
+        <div>
+            <table>
+                <thead>
+                    <tr>
+                        <th>Quality</th>
+                        <th>Type</th>
+                        <th>Download</th>
+                    </tr>
+                </thead>
+
+                <tbody>
+                {% for key, value in links_with_qualities.items %}
+                    <tr>
+                        <td>{{value}}</td>
+                        <td> {{ type}}</td>
+                        <td> <a href='{{key}}' target="_blank">
+                            <input class="dlbutton" id="dl-result-btn" type="button" name="dlbutton" value="Download"/>
+                            </a>
+                        </td>
+                    </tr>
+                </tbody>
+
+            {% endfor %}
+
+            </table>
+
+        </div>
+        <div class="another-vid">
+            <a  href="../">
+                <input class="dlbutton" id="another-video-btn" type="button" value="Download Another Video"/>
+            </a>
+        </div>
+    </div>
+{% endblock %}
+</body>
+
+</html>
